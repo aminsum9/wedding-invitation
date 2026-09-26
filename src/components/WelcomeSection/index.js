@@ -1,27 +1,27 @@
 /** @jsxImportSource @emotion/react */
 
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { object, string, bool, func } from 'prop-types';
 
 import WeddingImg from '../../assets/images/wedding-logo.png';
 import CountContainer from './CountContainer';
 import ScrollToDown from './ScrollToDown';
-import { styWrapper, styHero, styBackground, styButtonWrapper } from './styles';
+import { styWrapper, styHero, styBackground } from './styles';
 
-const DELAY_TIME = 1500;
+// const DELAY_TIME = 1500;
 
 function WelcomeSection({ location, guestName, isInvitation, isAnonymGuest, codeLink, onClickDetail }) {
-  const [loading, setLoading] = useState(false);
-  const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
+  // const [loading, setLoading] = useState(false);
+  // const [alreadyDownloadData, setAlreadyDownloadData] = useState(false);
 
-  const handleScrollTo = () => {
-    /** scroll into detail view */
-    const element = document.getElementById('fh5co-couple');
-    element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
-  };
+  // const handleScrollTo = () => {
+  //   /** scroll into detail view */
+  //   const element = document.getElementById('fh5co-couple');
+  //   element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+  // };
 
   const handleShowDetail = () => {
-    if (loading) return undefined;
+    // if (loading) return undefined;
 
     try {
       const myAudio = document.getElementById('myAudio');

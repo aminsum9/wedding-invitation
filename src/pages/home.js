@@ -64,8 +64,8 @@ class Home extends React.Component {
     render() {
         return (
             <div style={{ width: '100%' }} >
-                {this.state.currentPage == "welcome" && <WelcomeSection onClickDetail={() => { this.changePage("home"); this.playAudio() }} />}
-                {this.state.currentPage == "home" && (
+                {this.state.currentPage === "welcome" && <WelcomeSection onClickDetail={() => { this.changePage("home"); this.playAudio() }} />}
+                {this.state.currentPage  === "home" && (
                     <div className="container" style={{ paddingTop: 230, width: '100%' }} >
                         <div style={{
                             position: 'fixed',
@@ -86,8 +86,8 @@ class Home extends React.Component {
                         <Page3 />
                     </div>
                 )}
-                {this.state.currentPage == "home" && (<Page4 />)}
-                {this.state.currentPage == "home" && (
+                {this.state.currentPage === "home" && (<Page4 />)}
+                {this.state.currentPage === "home" && (
                     <div>
                         <footer id="fh5co-footer" role="contentinfo">
                             <div className="container">

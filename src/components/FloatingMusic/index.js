@@ -1,4 +1,4 @@
-import React, { forwardRef, Fragment, useEffect, useImperativeHandle, useState } from 'react';
+import React, { forwardRef, Fragment, useImperativeHandle, useState } from 'react';
 import IconMusic from '../../assets/images/music-icon.png';
 import IconMusicStop from '../../assets/images/music-stop-icon.png';
 import WeddingMusic from "../../assets/music/leberch-wedding-piano-595793.mp3";
