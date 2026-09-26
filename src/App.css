@@ -2,37 +2,370 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .app {
+  background-color: red;
+  z-index: 1000;
+} */
+
+.salam-font {
+  color: black;
+  font-size: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.italianno-regular {
+  font-family: "Italianno", cursive;
+  font-weight: 700;
+  font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.couple-box {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.and-hearth-box {
+  width: 6%;
 }
 
-@keyframes App-logo-spin {
+.groom-box {
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end
+}
+
+.bridge-box {
+  width: 47%;
+  display: flex;
+  flex-direction: row;
+}
+
+.rounded-image {
+  width: 150px;
+  height: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.and-heart {
+  font-size: 80px;
+  height: 150px;
+  width: 100px;
+  display: inline-block;
+
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1.2);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.2);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.story-card-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.story-card {
+  width: 50%;
+  border-width: 1px;
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  text-align: start;
+  padding: 10px
+}
+
+.story-image-right {
+  width: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  padding: 10px;
+}
+
+.story-image-left {
+  width: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  padding: 10px
+}
+
+.story-image-mobile {
+  display: none;
+}
+
+.story-card-half-space {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .salam-font {
+    color: black;
+    font-size: 20;
+  }
+
+  .couple-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .groom-box {
+    width: 40%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: start;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .and-hearth-box {
+    width: 10%;
+    display: flex;
+    float: top;
+    align-items: start;
+    justify-content: start;
+  }
+
+  .bridge-box {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    align-items: end;
+    justify-content: end;
+  }
+
+  .rounded-image {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .and-heart {
+    font-size: 80px;
+    height: 80px;
+    width: 50px;
+    min-width: 50px;
+    margin-left: -7px;
+    display: inline-block;
+
+    animation: heartbeat 1s infinite;
+  }
+
+  .story-card-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+  }
+
+  .story-card {
+    width: 100%;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    padding: 10px
+  }
+
+  .story-image-right {
+    display: none;
+  }
+
+  .story-image-left {
+    display: none;
+  }
+
+  .story-card-half-space {
+    display: none;
+  }
+
+  .story-image-mobile {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   CLOUD TRANSITION
+========================= */
+
+.cloud-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  visibility: hidden;
+}
+
+/* Ketika aktif */
+
+.cloud-transition.active {
+  visibility: visible;
+}
+
+/* =========================
+   CLOUD
+========================= */
+
+.cloud {
+  position: absolute;
+
+  width: 500px;
+  height: 300px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  transform: translateX(-120vw);
+}
+
+/* Tonjolan awan */
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 250px;
+  height: 250px;
+
+  left: 100px;
+  top: -100px;
+}
+
+.cloud::after {
+  width: 200px;
+  height: 200px;
+
+  left: 250px;
+  top: -70px;
+}
+
+/* =========================
+   POSISI
+========================= */
+
+.cloud1 {
+  top: 10%;
+}
+
+.cloud2 {
+  top: 40%;
+
+  left: 20%;
+}
+
+.cloud3 {
+  top: 70%;
+
+  left: 40%;
+}
+
+/* =========================
+   ANIMASI MASUK
+========================= */
+
+.cloud-transition.active .cloud {
+  animation: cloudIn 0.5s ease-in forwards;
+}
+
+/* =========================
+   ANIMASI KELUAR
+========================= */
+
+.cloud-transition:not(.active) .cloud {
+  animation: cloudOut 0.5s ease-out forwards;
+}
+
+@keyframes cloudIn {
+
   from {
-    transform: rotate(0deg);
+    transform: translateX(-120vw);
   }
+
   to {
-    transform: rotate(360deg);
+    transform: translateX(0);
   }
+
+}
+
+@keyframes cloudOut {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(120vw);
+  }
+
 }
